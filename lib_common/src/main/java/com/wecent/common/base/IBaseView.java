@@ -1,13 +1,11 @@
 package com.wecent.common.base;
 
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.trello.rxlifecycle3.LifecycleTransformer;
 
 import androidx.databinding.ViewDataBinding;
-import androidx.lifecycle.ViewModel;
 
 /**
  * @desc:
