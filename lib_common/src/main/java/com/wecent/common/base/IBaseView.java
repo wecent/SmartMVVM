@@ -3,8 +3,6 @@ package com.wecent.common.base;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import com.trello.rxlifecycle3.LifecycleTransformer;
-
 import androidx.databinding.ViewDataBinding;
 
 /**
@@ -44,12 +42,5 @@ public interface IBaseView<DB extends ViewDataBinding, VM extends BaseViewModel>
      * 绑定事件
      */
     void bindEvent();
-
-    /**
-     * 绑定Lifecycle
-     *
-     * @return LifecycleTransformer
-     */
-    <T> LifecycleTransformer<T> bindLifecycle();
 
 }

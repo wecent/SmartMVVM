@@ -12,7 +12,6 @@ import java.lang.reflect.Type;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.ViewDataBinding;
-import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.ViewModelProvider;
 
 /**
