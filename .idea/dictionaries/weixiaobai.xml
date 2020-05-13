@@ -1,9 +1,12 @@
 <component name="ProjectDictionaryState">
   <dictionary name="weixiaobai">
     <words>
+      <w>arouter</w>
+      <w>autodispose</w>
       <w>flowable</w>
       <w>lrucache</w>
       <w>nonet</w>
+      <w>rxbinding</w>
       <w>rxjava</w>
       <w>rxlifecycle</w>
       <w>smartion</w>

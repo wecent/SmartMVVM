@@ -4,21 +4,22 @@ package com.wecent.common.binding.command;
 import io.reactivex.functions.Function;
 
 /**
- * About : kelin的ResponseCommand
- * 执行的命令事件转换
+ * @desc: 执行的命令事件转换
+ * @author: wecent
+ * @date: 2020/5/8
  */
 public class ResponseCommand<T, R> {
 
-    private BindingFunction<R> execute;
+    private BindingFunction0<R> execute;
     private Function<T, R> function;
-    private BindingFunction<Boolean> canExecute;
+    private BindingFunction0<Boolean> canExecute;
 
     /**
      * like {@link BindingCommand},but ResponseCommand can return result when command has executed!
      *
      * @param execute function to execute when event occur.
      */
-    public ResponseCommand(BindingFunction<R> execute) {
+    public ResponseCommand(BindingFunction0<R> execute) {
         this.execute = execute;
     }
 
@@ -28,13 +29,13 @@ public class ResponseCommand<T, R> {
     }
 
 
-    public ResponseCommand(BindingFunction<R> execute, BindingFunction<Boolean> canExecute) {
+    public ResponseCommand(BindingFunction0<R> execute, BindingFunction0<Boolean> canExecute) {
         this.execute = execute;
         this.canExecute = canExecute;
     }
 
 
-    public ResponseCommand(Function<T, R> execute, BindingFunction<Boolean> canExecute) {
+    public ResponseCommand(Function<T, R> execute, BindingFunction0<Boolean> canExecute) {
         this.function = execute;
         this.canExecute = canExecute;
     }

@@ -11,43 +11,55 @@ ext {
 
     dependencies = [
             // androidx
-            'material'              : 'com.google.android.material:material:1.1.0',
-            'appcompat'             : 'androidx.appcompat:appcompat:1.2.0-beta01',
-            'annotation'            : 'androidx.annotation:annotation:1.1.0',
-            'constraintlayout'      : 'androidx.constraintlayout:constraintlayout:1.1.3',
-            'swiperefreshlayout'    : 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0',
+            'material'                      : 'com.google.android.material:material:1.1.0',
+            'appcompat'                     : 'androidx.appcompat:appcompat:1.2.0-beta01',
+            'annotation'                    : 'androidx.annotation:annotation:1.1.0',
+            'constraintlayout'              : 'androidx.constraintlayout:constraintlayout:1.1.3',
+            'swiperefreshlayout'            : 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0',
 
             // retrofit
-            'retrofit'              : 'com.squareup.retrofit2:retrofit:2.8.1',
-            'converter-scalars'     : 'com.squareup.retrofit2:converter-scalars:2.8.1',
-            'converter-gson'        : 'com.squareup.retrofit2:converter-gson:2.8.1',
-            'adapter-rxjava'        : 'com.squareup.retrofit2:adapter-rxjava2:2.8.1',
+            'retrofit'                      : 'com.squareup.retrofit2:retrofit:2.8.1',
+            'converter-scalars'             : 'com.squareup.retrofit2:converter-scalars:2.8.1',
+            'converter-gson'                : 'com.squareup.retrofit2:converter-gson:2.8.1',
+            'adapter-rxjava'                : 'com.squareup.retrofit2:adapter-rxjava2:2.8.1',
 
             // rxjava
-            'rxjava'                : 'io.reactivex.rxjava3:rxjava:3.0.0',
-            'rxandroid'             : 'io.reactivex.rxjava3:rxandroid:3.0.0',
-
-            // lrucache
-            'disklrucache'          : 'com.jakewharton:disklrucache:2.0.2',
+            'rxjava'                        : 'io.reactivex.rxjava3:rxjava:3.0.0',
+            'rxandroid'                     : 'io.reactivex.rxjava3:rxandroid:3.0.0',
 
             // lifecycle
-            'lifecycle-runtime'     : 'androidx.lifecycle:lifecycle-runtime:2.2.0',
-            'lifecycle-java8'       : 'androidx.lifecycle:lifecycle-common-java8:2.2.0',
-            'lifecycle-extensions'  : 'androidx.lifecycle:lifecycle-extensions:2.2.0',
-            'lifecycle-viewmodel'   : 'androidx.lifecycle:lifecycle-viewmodel:2.2.0',
-            'lifecycle-livedata'    : 'androidx.lifecycle:lifecycle-livedata:2.2.0',
+            'lifecycle-runtime'             : 'androidx.lifecycle:lifecycle-runtime:2.2.0',
+            'lifecycle-java8'               : 'androidx.lifecycle:lifecycle-common-java8:2.2.0',
+            'lifecycle-extensions'          : 'androidx.lifecycle:lifecycle-extensions:2.2.0',
+            'lifecycle-viewmodel'           : 'androidx.lifecycle:lifecycle-viewmodel:2.2.0',
+            'lifecycle-livedata'            : 'androidx.lifecycle:lifecycle-livedata:2.2.0',
 
-            // rxlifecycle
-            'rxlifecycle'           : 'com.trello.rxlifecycle3:rxlifecycle:3.1.0',
-            'rxlifecycle-android'   : 'com.trello.rxlifecycle3:rxlifecycle-android:3.1.0',
-            'rxlifecycle-components': 'com.trello.rxlifecycle3:rxlifecycle-components:3.1.0',
+            // rxbinding
+            'rxbinding'                     : 'com.jakewharton.rxbinding3:rxbinding:3.1.0',
+            'rxbinding-core'                : 'com.jakewharton.rxbinding3:rxbinding-core:3.1.0',
+            'rxbinding-appcompat'           : 'com.jakewharton.rxbinding3:rxbinding-appcompat:3.1.0',
+            'rxbinding-drawerlayout'        : 'com.jakewharton.rxbinding3:rxbinding-drawerlayout:3.1.0',
+            'rxbinding-leanback'            : 'com.jakewharton.rxbinding3:rxbinding-leanback:3.1.0',
+            'rxbinding-recyclerview'        : 'com.jakewharton.rxbinding3:rxbinding-recyclerview:3.1.0',
+            'rxbinding-slidingpanelayout'   : 'com.jakewharton.rxbinding3:rxbinding-slidingpanelayout:3.1.0',
+            'rxbinding-swiperefreshlayout'  : 'com.jakewharton.rxbinding3:rxbinding-swiperefreshlayout:3.1.0',
+            'rxbinding-rxbinding-viewpager' : 'com.jakewharton.rxbinding3:rxbinding-viewpager:3.1.0',
+            'rxbinding-rxbinding-viewpager2': 'com.jakewharton.rxbinding3:rxbinding-viewpager2:3.1.0',
+
+            // autodispose
+//            'autodispose-lifecycle'         : 'com.uber.autodispose2:autodispose-androidx-lifecycle:2.0.0',
+            'autodispose-lifecycle'         : 'com.uber.autodispose:autodispose-android-archcomponents:1.4.0',
+
+            // arouter
+            'arouter'                       : 'com.alibaba:arouter-api:1.5.0',
+            'arouter-compiler'              : 'com.alibaba:arouter-compiler:1.2.2',
 
             // other
-            'eventbus'              : 'org.greenrobot:eventbus:3.2.0',
-            'lottie'                : 'com.airbnb.android:lottie:2.7.0',
-            'arouter'               : 'com.alibaba:arouter-api:1.5.0',
-            'arouter-compiler'      : 'com.alibaba:arouter-compiler:1.2.2',
-            'flycotablayout'        : 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar',
-            'rwidgethelper'         : 'com.ruffian.library:RWidgetHelper-AndroidX:0.0.3',
+            'glide'                         : 'com.github.bumptech.glide:glide:4.11.0',
+            'lottie'                        : 'com.airbnb.android:lottie:2.7.0',
+            'disklrucache'                  : 'com.jakewharton:disklrucache:2.0.2',
+            'flycotablayout'                : 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar',
+            'baseadapterhelper'             : 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.2',
+            'rwidgethelper'                 : 'com.ruffian.library:RWidgetHelper-AndroidX:0.0.3',
     ]
 }

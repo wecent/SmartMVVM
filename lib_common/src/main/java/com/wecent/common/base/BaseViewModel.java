@@ -2,7 +2,6 @@ package com.wecent.common.base;
 
 import android.app.Application;
 
-import com.trello.rxlifecycle3.LifecycleProvider;
 import com.wecent.common.R;
 
 import java.lang.ref.WeakReference;
@@ -26,7 +25,7 @@ public class BaseViewModel extends AndroidViewModel implements IBaseViewModel, C
     /**
      * 弱引用持有避免造成内存泄漏
      */
-    private WeakReference<LifecycleProvider> mLifecycleProvider;
+    private WeakReference<LifecycleOwner> mLifecycleOwner;
     /**
      * 管理RxJava异步操作造成的内存泄漏
      */
@@ -49,12 +48,12 @@ public class BaseViewModel extends AndroidViewModel implements IBaseViewModel, C
      *
      * @param lifecycle
      */
-    public void injectLifecycleProvider(LifecycleProvider lifecycle) {
-        this.mLifecycleProvider = new WeakReference<>(lifecycle);
+    public void injectLifecycleOwner(LifecycleOwner lifecycle) {
+        this.mLifecycleOwner = new WeakReference<>(lifecycle);
     }
 
-    public LifecycleProvider getLifecycleProvider() {
-        return mLifecycleProvider.get();
+    public LifecycleOwner getLifecycleOwner() {
+        return mLifecycleOwner.get();
     }
 
     public BaseLiveData getBaseLiveData() {

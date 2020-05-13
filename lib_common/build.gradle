@@ -54,13 +54,17 @@ dependencies {
     api rootProject.ext.dependencies['lifecycle-viewmodel']
     api rootProject.ext.dependencies['lifecycle-livedata']
 
-    api rootProject.ext.dependencies['rxlifecycle']
-    api rootProject.ext.dependencies['rxlifecycle-android']
-    api rootProject.ext.dependencies['rxlifecycle-components']
+//    api rootProject.ext.dependencies['rxlifecycle']
+//    api rootProject.ext.dependencies['rxlifecycle-android']
+//    api rootProject.ext.dependencies['rxlifecycle-components']
 
-    api rootProject.ext.dependencies['eventbus']
+    api rootProject.ext.dependencies['rxbinding']
+
+    api rootProject.ext.dependencies['glide']
     api rootProject.ext.dependencies['lottie']
     api rootProject.ext.dependencies['arouter']
+    api rootProject.ext.dependencies['autodispose-lifecycle']
     api rootProject.ext.dependencies['flycotablayout']
+    api rootProject.ext.dependencies['baseadapterhelper']
     api rootProject.ext.dependencies['rwidgethelper']
 }

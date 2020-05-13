@@ -6,8 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.trello.rxlifecycle3.LifecycleTransformer;
-import com.trello.rxlifecycle3.components.support.RxFragment;
 import com.wecent.common.BaseApplication;
 import com.wecent.common.network.manager.NetworkState;
 import com.wecent.common.network.manager.NetworkStateManager;
@@ -21,6 +19,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.ViewDataBinding;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.ViewModelProvider;
 
 /**
@@ -28,7 +27,7 @@ import androidx.lifecycle.ViewModelProvider;
  * @author: wecent
  * @date: 2020/4/12
  */
-public abstract class BaseFragment<DB extends ViewDataBinding, VM extends BaseViewModel> extends RxFragment implements IBaseView<DB, VM> {
+public abstract class BaseFragment<DB extends ViewDataBinding, VM extends BaseViewModel> extends Fragment implements IBaseView<DB, VM> {
 
     protected LoadingDialog mLoadingDialog;
     protected AppCompatActivity mActivity;
@@ -89,7 +88,7 @@ public abstract class BaseFragment<DB extends ViewDataBinding, VM extends BaseVi
         //让ViewModel拥有View的生命周期感应
         getLifecycle().addObserver(mViewModel);
         //注入RxLifecycle生命周期
-        mViewModel.injectLifecycleProvider(this);
+        mViewModel.injectLifecycleOwner(this);
         //注册RxBus
         mViewModel.injectRxBus();
     }
@@ -166,8 +165,4 @@ public abstract class BaseFragment<DB extends ViewDataBinding, VM extends BaseVi
 
     }
 
-    @Override
-    public <T> LifecycleTransformer<T> bindLifecycle() {
-        return this.bindToLifecycle();
-    }
 }

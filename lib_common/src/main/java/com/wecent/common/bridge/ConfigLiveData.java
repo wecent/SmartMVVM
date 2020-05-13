@@ -11,8 +11,7 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 
 /**
- * @desc: 仅分发 owner observe 后 才新拿到的数据
- * 可避免共享作用域 VM 下 liveData 被 observe 时旧数据倒灌的情况
+ * @desc: 仅分发 owner observe 后才新拿到的数据，可避免共享作用域 VM 下 liveData 被 observe 时旧数据倒灌的情况
  * @author: wecent
  * @date: 2020/5/8
  */

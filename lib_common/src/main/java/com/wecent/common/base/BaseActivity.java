@@ -2,8 +2,6 @@ package com.wecent.common.base;
 
 import android.os.Bundle;
 
-import com.trello.rxlifecycle3.LifecycleTransformer;
-import com.trello.rxlifecycle3.components.support.RxAppCompatActivity;
 import com.wecent.common.BaseApplication;
 import com.wecent.common.network.manager.NetworkStateManager;
 import com.wecent.common.widget.loading.LoadingDialog;
@@ -14,6 +12,7 @@ import java.lang.reflect.Type;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.ViewDataBinding;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.ViewModelProvider;
 
 /**
@@ -21,7 +20,7 @@ import androidx.lifecycle.ViewModelProvider;
  * @author: wecent
  * @date: 2020/4/12
  */
-public abstract class BaseActivity<DB extends ViewDataBinding, VM extends BaseViewModel> extends RxAppCompatActivity implements IBaseView<DB, VM> {
+public abstract class BaseActivity<DB extends ViewDataBinding, VM extends BaseViewModel> extends AppCompatActivity implements IBaseView<DB, VM> {
 
     protected LoadingDialog mLoadingDialog;
     private ViewModelProvider mActivityProvider;
@@ -63,7 +62,7 @@ public abstract class BaseActivity<DB extends ViewDataBinding, VM extends BaseVi
         //让ViewModel拥有View的生命周期感应
         getLifecycle().addObserver(mViewModel);
         //注入RxLifecycle生命周期
-        mViewModel.injectLifecycleProvider(this);
+        mViewModel.injectLifecycleOwner(this);
     }
 
     protected void bindLiveData() {
@@ -114,8 +113,4 @@ public abstract class BaseActivity<DB extends ViewDataBinding, VM extends BaseVi
         }
     }
 
-    @Override
-    public <T> LifecycleTransformer<T> bindLifecycle() {
-        return this.bindToLifecycle();
-    }
 }

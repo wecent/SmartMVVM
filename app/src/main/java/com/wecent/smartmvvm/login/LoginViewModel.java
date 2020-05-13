@@ -3,9 +3,10 @@ package com.wecent.smartmvvm.login;
 import android.app.Application;
 import android.text.TextUtils;
 
+import com.uber.autodispose.AutoDispose;
+import com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider;
 import com.wecent.common.base.BaseViewModel;
 import com.wecent.common.network.exception.BaseException;
-import com.wecent.common.network.lifecycle.LifecycleTransformer;
 import com.wecent.common.network.observer.BaseObserver;
 import com.wecent.common.network.response.ResponseTransformer;
 import com.wecent.common.network.schedulers.SchedulersTransformer;
@@ -42,12 +43,15 @@ public class LoginViewModel extends BaseViewModel {
             ToastUtils.showShort("请输入密码！");
             return;
         }
-        showLoadingDialog();
+
         ApiManager.getInstance()
                 .login(userName.getValue(), password.getValue())
+                .doOnSubscribe(disposable -> {
+                    showLoadingDialog();
+                })
                 .compose(ResponseTransformer.convertResponse())
-                .compose(LifecycleTransformer.bindToLifecycle(getLifecycleProvider()))
                 .compose(SchedulersTransformer.observableSchedulers("LoginViewModel"))
+                .as(AutoDispose.autoDisposable(AndroidLifecycleScopeProvider.from(getLifecycleOwner())))
                 .subscribe(new BaseObserver<LoginEntity>() {
                     @Override
                     public void onSuccess(LoginEntity entity) {
