@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/config_color_blank_3"
+    android:background="@color/config_color_gray_6"
     app:theme="@style/Theme.AppCompat.Light">
 
     <ImageView
@@ -19,11 +19,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:layout_below="@+id/iv_retry"
+        android:layout_below="@+id/iv_reload"
         android:layout_centerHorizontal="true"
         android:text="@string/state_error"
         android:textSize="16dp"
-        android:textColor="@color/config_color_text_1" />
+        android:textColor="@color/config_color_base_3" />
 
     <TextView
         android:id="@+id/btn_reload"
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:background="@drawable/btn_state_reload"
-        android:layout_below="@+id/tv_retry"
+        android:layout_below="@+id/tv_reload"
         android:layout_centerHorizontal="true"
         android:text="刷新重试"
         android:textSize="14dp"

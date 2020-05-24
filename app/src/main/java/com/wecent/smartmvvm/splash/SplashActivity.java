@@ -37,12 +37,9 @@ public class SplashActivity extends BaseActivity {
 
     @Override
     public void bindData() {
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                LoginActivity.launch(SplashActivity.this);
-                finish();
-            }
+        new Handler().postDelayed(() -> {
+            LoginActivity.launch(SplashActivity.this);
+            finish();
         }, 1000);
     }
 

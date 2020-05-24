@@ -24,7 +24,7 @@
             android:id="@+id/v_line"
             android:layout_width="match_parent"
             android:layout_height="1px"
-            android:background="@color/config_color_gray_9"
+            android:background="@color/config_color_gray_3"
             android:layout_above="@+id/tb_main" />
 
         <com.flyco.tablayout.CommonTabLayout
@@ -33,11 +33,11 @@
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
             android:background="@color/config_color_white"
-            app:tl_iconHeight="20dp"
-            app:tl_iconWidth="20dp"
+            app:tl_iconHeight="24dp"
+            app:tl_iconWidth="24dp"
             app:tl_indicator_height="0dp"
             app:tl_textSelectColor="@color/config_color_primary"
-            app:tl_textUnselectColor="@color/config_color_text_2"
+            app:tl_textUnselectColor="@color/config_color_base_3"
             app:tl_textsize="12dp" />
 
     </RelativeLayout>

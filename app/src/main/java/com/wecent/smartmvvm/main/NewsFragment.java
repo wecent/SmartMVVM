@@ -20,7 +20,7 @@ public class NewsFragment extends BaseFragment {
 
     @Override
     public ViewDataBinding getBinding(LayoutInflater inflater, ViewGroup container) {
-        return DataBindingUtil.inflate(inflater, R.layout.fragment_news, container, false);
+        return DataBindingUtil.inflate(inflater, R.layout.fragment_movie, container, false);
     }
 
     @Override

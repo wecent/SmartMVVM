@@ -27,13 +27,6 @@ public abstract class BaseObserver<T> implements Observer<T> {
      */
     public abstract void onFailure(BaseException e);
 
-    /**
-     * 请求失败
-     *
-     * @param e 异常
-     */
-    public abstract void onError(BaseException e);
-
     @Override
     public void onSubscribe(@NonNull Disposable d) {
 
@@ -46,13 +39,7 @@ public abstract class BaseObserver<T> implements Observer<T> {
 
     @Override
     public void onError(@NonNull Throwable e) {
-        if(((BaseException) e).isHttpException()) {
-            // 处理网络异常
-            onFailure((BaseException) e);
-        } else {
-            // 处理code异常
-            onError((BaseException) e);
-        }
+        onFailure((BaseException) e);
     }
 
     @Override

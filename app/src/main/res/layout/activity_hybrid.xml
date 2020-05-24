@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:binding="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="ViewModel"
+            type="com.wecent.smartmvvm.hybrid.HybridViewModel" />
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ll_hybrid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.wecent.common.widget.titlebar.TitleBar
+            android:id="@+id/tb_hybrid"
+            binding:leftDrawable="@{ViewModel.leftDrawable}"
+            binding:titleText="@{ViewModel.title}"
+            binding:onLeftClick="@{ViewModel.onBackClick}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</layout>

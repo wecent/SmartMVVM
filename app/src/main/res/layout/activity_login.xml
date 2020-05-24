@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:binding="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -10,23 +10,16 @@
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/config_color_white"
         android:orientation="vertical" >
 
-        <com.wecent.common.widget.titlebar.TitleBar
-            android:id="@+id/tb_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:showBottomLine="false"/>
-
         <ImageView
             android:id="@+id/iv_logo"
-            android:layout_width="86dp"
-            android:layout_height="86dp"
-            android:layout_marginTop="36dp"
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:layout_marginTop="64dp"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/ic_weixun"/>
 
@@ -35,30 +28,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@null"
-            android:drawableLeft="@drawable/ic_login_phone"
-            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/ic_login_username"
+            android:drawablePadding="12dp"
             android:textCursorDrawable="@drawable/bg_input_cursor"
             android:paddingTop="16dp"
             android:paddingBottom="16dp"
-            android:paddingRight="10dp"
-            android:layout_marginTop="36dp"
-            android:layout_marginLeft="36dp"
-            android:layout_marginRight="36dp"
+            android:paddingRight="12dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
             android:gravity="left"
-            android:hint="请输入手机号"
+            android:hint="请输入账号"
             android:inputType="number"
             android:maxLines="1"
-            android:maxLength="11"
             android:text="@={ViewModel.userName}"
-            android:textColor="@color/config_color_text_1"
-            android:textColorHint="@color/config_color_text_3"
-            android:textSize="16dp" />
+            android:textColor="@color/config_color_base_3"
+            android:textColorHint="@color/config_color_base_6"
+            android:textSize="16dp"
+            binding:onTextChanged="@{ViewModel.onUsernameChange}" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1px"
-            android:layout_marginLeft="36dp"
-            android:layout_marginRight="36dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
             android:background="@color/config_color_gray_3"/>
 
         <com.wecent.common.widget.ClearEditText
@@ -67,35 +60,36 @@
             android:layout_height="wrap_content"
             android:layout_toLeftOf="@+id/ln_login_code"
             android:drawableLeft="@drawable/ic_login_password"
-            android:drawablePadding="10dp"
+            android:drawablePadding="12dp"
             android:background="@null"
             android:paddingTop="16dp"
             android:paddingBottom="16dp"
-            android:paddingRight="10dp"
-            android:layout_marginLeft="36dp"
-            android:layout_marginRight="36dp"
+            android:paddingRight="12dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
             android:textCursorDrawable="@drawable/bg_input_cursor"
             android:gravity="left"
-            android:hint="请输入密码（至少六位）"
+            android:hint="请输入密码"
             android:inputType="textPassword"
             android:maxLines="1"
             android:text="@={ViewModel.password}"
-            android:textColor="@color/config_color_text_1"
-            android:textColorHint="@color/config_color_text_3"
-            android:textSize="16dp" />
+            android:textColor="@color/config_color_base_3"
+            android:textColorHint="@color/config_color_base_6"
+            android:textSize="16dp"
+            binding:onTextChanged="@{ViewModel.onPasswordChange}" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1px"
-            android:layout_marginLeft="36dp"
-            android:layout_marginRight="36dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
             android:background="@color/config_color_gray_3"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="36dp"
-            android:layout_marginRight="36dp">
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp">
 
             <CheckBox
                 android:id="@+id/cb_protocol"
@@ -103,12 +97,14 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="16dp"
                 android:paddingBottom="16dp"
-                android:padding="12dp"
-                android:checked="true"
-                android:button="@drawable/bg_check_incense"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:checked="@{ViewModel.isCheck}"
+                android:button="@drawable/bg_config_check"
                 android:text="我已阅读并同意《用户协议》"
                 android:textSize="14dp"
-                android:textColor="@color/config_color_text_1" />
+                android:textColor="@color/config_color_base_3"
+                binding:onCheckedChanged="@{ViewModel.onCheckedChange}" />
 
         </RelativeLayout>
 
@@ -117,44 +113,46 @@
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_below="@+id/ll_login_top"
-            android:layout_marginLeft="36dp"
-            android:layout_marginTop="36dp"
-            android:layout_marginRight="36dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginRight="48dp"
             android:background="@drawable/btn_config_login"
             android:gravity="center"
             android:enabled="@{ViewModel.isLogin}"
             android:text="登录"
             android:textColor="@color/config_color_white"
             android:textSize="16dp"
-            android:onClick="@{()->ViewModel.login()}" />
+            binding:onClick="@{ViewModel.onLoginClick}" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="36dp"
-            android:layout_marginRight="36dp">
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp">
 
             <TextView
                 android:id="@+id/tv_register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="12dp"
-                android:paddingBottom="12dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
                 android:layout_gravity="center_horizontal"
                 android:text="账号注册>"
                 android:textSize="14dp"
-                android:textColor="@color/config_color_primary" />
+                android:textColor="@color/config_color_primary"
+                binding:onClick="@{ViewModel.onRegisterClick}" />
 
             <TextView
-                android:id="@+id/tv_forgeted"
+                android:id="@+id/tv_forget"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="12dp"
-                android:paddingBottom="12dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
                 android:layout_alignParentRight="true"
                 android:text="忘记密码?"
                 android:textSize="14dp"
-                android:textColor="@color/config_color_primary" />
+                android:textColor="@color/config_color_primary"
+                binding:onClick="@{ViewModel.onForgetClick}" />
 
         </RelativeLayout>
 

@@ -20,7 +20,7 @@ public class MallFragment extends BaseFragment {
 
     @Override
     public ViewDataBinding getBinding(LayoutInflater inflater, ViewGroup container) {
-        return DataBindingUtil.inflate(inflater, R.layout.fragment_mall, container, false);
+        return DataBindingUtil.inflate(inflater, R.layout.fragment_find, container, false);
     }
 
     @Override

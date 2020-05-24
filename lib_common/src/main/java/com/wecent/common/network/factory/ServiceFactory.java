@@ -1,6 +1,7 @@
 package com.wecent.common.network.factory;
 
 import com.wecent.common.network.ApiConstants;
+import com.wecent.common.network.interceptor.CacheInterceptor;
 import com.wecent.common.network.interceptor.HeaderInterceptor;
 import com.wecent.common.network.interceptor.LoggingInterceptor;
 import com.wecent.common.network.interceptor.ParamsInterceptor;
@@ -25,7 +26,7 @@ public class ServiceFactory {
     /**
      * 默认的超时时间
      */
-    public static final int DEFAULT_MILLISECONDS = 60000;
+    public static final int DEFAULT_MILLI_SECONDS = 60000;
 
     private static Retrofit mRetrofit;
     private static Map<String, Retrofit> mRetrofitMap = new HashMap<>();
@@ -71,9 +72,10 @@ public class ServiceFactory {
                 .addInterceptor(new LoggingInterceptor())
                 .addInterceptor(new HeaderInterceptor())
                 .addInterceptor(new ParamsInterceptor())
-                .connectTimeout(DEFAULT_MILLISECONDS, TimeUnit.MILLISECONDS)
-                .readTimeout(DEFAULT_MILLISECONDS, TimeUnit.MILLISECONDS)
-                .writeTimeout(DEFAULT_MILLISECONDS, TimeUnit.MILLISECONDS);
+                .addInterceptor(new CacheInterceptor())
+                .connectTimeout(DEFAULT_MILLI_SECONDS, TimeUnit.MILLISECONDS)
+                .readTimeout(DEFAULT_MILLI_SECONDS, TimeUnit.MILLISECONDS)
+                .writeTimeout(DEFAULT_MILLI_SECONDS, TimeUnit.MILLISECONDS);
         return builder;
     }
 

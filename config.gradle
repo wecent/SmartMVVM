@@ -60,6 +60,6 @@ ext {
             'disklrucache'                  : 'com.jakewharton:disklrucache:2.0.2',
             'flycotablayout'                : 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar',
             'baseadapterhelper'             : 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.2',
-            'rwidgethelper'                 : 'com.ruffian.library:RWidgetHelper-AndroidX:0.0.3',
+            "agentweb"                      : "com.just.agentweb:agentweb:4.0.2",
     ]
 }

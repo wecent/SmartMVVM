@@ -16,4 +16,6 @@ public class ConfigConstants {
 
     /*******************************************UI************************************************/
 
+    public static String KEY_HYBRID_URL = "key_hybrid_url";
+
 }

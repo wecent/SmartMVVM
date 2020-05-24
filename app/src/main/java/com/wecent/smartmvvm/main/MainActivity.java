@@ -33,13 +33,13 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
     private static final int EXIT_INTERVAL_TIME = 2000;
     private long mExitTime = 0;
     private List<Fragment> mFragments = new ArrayList<>();
-    private String[] mTitles = {"首页", "商城", "消息", "我的"};
+    private String[] mTitles = {"首页", "发现", "电影", "我的"};
     private int[] mNormalIcon = {
-            R.drawable.ic_main_home_normal, R.drawable.ic_main_mall_normal,
-            R.drawable.ic_main_news_normal, R.drawable.ic_main_mine_normal};
+            R.drawable.ic_home_normal, R.drawable.ic_find_normal,
+            R.drawable.ic_movie_normal, R.drawable.ic_mine_normal};
     private int[] mSelectedIcon = {
-            R.drawable.ic_main_home_selected, R.drawable.ic_main_mall_selected,
-            R.drawable.ic_main_news_selected, R.drawable.ic_main_mine_selected};
+            R.drawable.ic_home_selected, R.drawable.ic_find_selected,
+            R.drawable.ic_movie_selected, R.drawable.ic_mine_selected};
     private ArrayList<CustomTabEntity> mTabEntities = new ArrayList<>();
 
     public static void launch(Activity context) {

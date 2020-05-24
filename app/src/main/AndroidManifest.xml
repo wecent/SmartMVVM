@@ -30,6 +30,8 @@
             android:name="com.wecent.smartmvvm.main.MainActivity"
             android:screenOrientation="locked"
             android:launchMode="singleTask"/>
+        <activity android:name=".hybrid.HybridActivity"
+            android:screenOrientation="locked" />
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

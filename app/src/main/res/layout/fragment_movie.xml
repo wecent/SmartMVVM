@@ -15,11 +15,11 @@
         android:background="@color/config_color_white">
 
         <com.wecent.common.widget.titlebar.TitleBar
-            android:id="@+id/tb_home"
+            android:id="@+id/tb_movie"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:showBottom="true"
-            app:titleText="首页"/>
+            app:titleText="电影"/>
 
     </RelativeLayout>
 
