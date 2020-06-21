@@ -2,7 +2,6 @@ package com.wecent.common;
 
 import android.app.Activity;
 import android.app.Application;
-import android.content.Context;
 
 import com.wecent.common.utils.Utils;
 

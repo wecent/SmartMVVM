@@ -1,8 +1,8 @@
-package com.wecent.common.helper;
+package com.wecent.smartmvvm.helper;
 
 import android.text.TextUtils;
 
-import com.wecent.common.constant.ConfigConstants;
+import com.wecent.smartmvvm.constant.ConfigConstants;
 import com.wecent.common.utils.SPUtils;
 
 /**

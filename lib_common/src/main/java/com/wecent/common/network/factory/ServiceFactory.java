@@ -1,6 +1,6 @@
 package com.wecent.common.network.factory;
 
-import com.wecent.common.network.ApiConstants;
+import com.wecent.common.constant.ApiConstants;
 import com.wecent.common.network.interceptor.CacheInterceptor;
 import com.wecent.common.network.interceptor.HeaderInterceptor;
 import com.wecent.common.network.interceptor.LoggingInterceptor;

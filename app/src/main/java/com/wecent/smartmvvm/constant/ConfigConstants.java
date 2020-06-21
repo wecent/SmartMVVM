@@ -1,4 +1,4 @@
-package com.wecent.common.constant;
+package com.wecent.smartmvvm.constant;
 
 /**
  * @desc: 公共常量池

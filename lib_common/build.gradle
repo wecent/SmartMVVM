@@ -59,8 +59,8 @@ dependencies {
     api rootProject.ext.dependencies['glide']
     api rootProject.ext.dependencies['lottie']
     api rootProject.ext.dependencies['arouter']
-    api rootProject.ext.dependencies['autodispose-lifecycle']
+    api rootProject.ext.dependencies['autodispose']
     api rootProject.ext.dependencies['flycotablayout']
-    api rootProject.ext.dependencies['baseadapterhelper']
+    api rootProject.ext.dependencies['adapterhelper']
     api rootProject.ext.dependencies['agentweb']
 }

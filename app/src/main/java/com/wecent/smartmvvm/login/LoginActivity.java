@@ -3,6 +3,7 @@ package com.wecent.smartmvvm.login;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import com.wecent.common.base.BaseActivity;
@@ -48,9 +49,10 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
 
     @Override
     public void bindEvent() {
-        mBinding.cbProtocol.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            mViewModel.isLogin.setValue(isChecked);
-        });
+//        mBinding.cbProtocol.setOnCheckedChangeListener((buttonView, isChecked) -> {
+//            mViewModel.isLogin.setValue(isChecked);
+//        });
+        mBinding.cbProtocol.setOnClickListener(view -> mBinding.cbProtocol.toggle());
     }
 
 }

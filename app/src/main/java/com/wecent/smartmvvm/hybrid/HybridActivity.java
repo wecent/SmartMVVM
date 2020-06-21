@@ -16,7 +16,7 @@ import android.widget.LinearLayout;
 import com.just.agentweb.AgentWeb;
 import com.just.agentweb.DefaultWebClient;
 import com.wecent.common.base.BaseActivity;
-import com.wecent.common.constant.ConfigConstants;
+import com.wecent.smartmvvm.constant.ConfigConstants;
 import com.wecent.common.utils.StatusBarUtils;
 import com.wecent.smartmvvm.BR;
 import com.wecent.smartmvvm.R;

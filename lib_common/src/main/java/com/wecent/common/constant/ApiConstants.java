@@ -1,4 +1,4 @@
-package com.wecent.common.network;
+package com.wecent.common.constant;
 
 /**
  * @desc: Http 请求常量

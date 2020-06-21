@@ -2,7 +2,7 @@ ext {
     android = [
             compileSdkVersion: 29,
             buildToolsVersion: '29.0.3',
-            applicationId    : 'com.wecent.smartion',
+            applicationId    : 'com.wecent.smartmvvm',
             minSdkVersion    : 19,
             targetSdkVersion : 29,
             versionCode      : 100,
@@ -46,10 +46,6 @@ ext {
             'rxbinding-rxbinding-viewpager' : 'com.jakewharton.rxbinding3:rxbinding-viewpager:3.1.0',
             'rxbinding-rxbinding-viewpager2': 'com.jakewharton.rxbinding3:rxbinding-viewpager2:3.1.0',
 
-            // autodispose
-//            'autodispose-lifecycle'         : 'com.uber.autodispose2:autodispose-androidx-lifecycle:2.0.0',
-            'autodispose-lifecycle'         : 'com.uber.autodispose:autodispose-android-archcomponents:1.4.0',
-
             // arouter
             'arouter'                       : 'com.alibaba:arouter-api:1.5.0',
             'arouter-compiler'              : 'com.alibaba:arouter-compiler:1.2.2',
@@ -58,8 +54,9 @@ ext {
             'glide'                         : 'com.github.bumptech.glide:glide:4.11.0',
             'lottie'                        : 'com.airbnb.android:lottie:2.7.0',
             'disklrucache'                  : 'com.jakewharton:disklrucache:2.0.2',
+            'autodispose'                   : 'com.uber.autodispose:autodispose-android-archcomponents:1.4.0',
             'flycotablayout'                : 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar',
-            'baseadapterhelper'             : 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.2',
+            'adapterhelper'                 : 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.2',
             "agentweb"                      : "com.just.agentweb:agentweb:4.0.2",
     ]
 }

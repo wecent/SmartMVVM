@@ -41,6 +41,12 @@
         <attr name="onRightClick" format="boolean"/>
     </declare-styleable>
 
+    <declare-styleable name="CheckButton">
+        <attr name="size" format="dimension" />
+        <attr name="color_border" format="color" />
+        <attr name="color_background" format="color" />
+    </declare-styleable>
+
     <!-- ViewAdapter -->
     <declare-styleable name="CheckBox">
         <attr name="onCheckedChange" format="reference" />

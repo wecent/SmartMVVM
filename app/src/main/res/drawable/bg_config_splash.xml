@@ -16,4 +16,5 @@
             android:gravity="bottom|center_horizontal"
             android:src="@drawable/ic_weixun" />
     </item>
+
 </layer-list>   

@@ -22,15 +22,15 @@
     <color name="config_color_black_15">#26000000</color>
     <color name="config_color_black_10">#19000000</color>
 
-    <color name="config_color_gray_1">#D1D1D1</color>
-    <color name="config_color_gray_2">#E2E2E2</color>
-    <color name="config_color_gray_3">#F3F3F3</color>
-    <color name="config_color_gray_4">#D4D4D4</color>
-    <color name="config_color_gray_5">#E5E5E5</color>
-    <color name="config_color_gray_6">#F6F6F6</color>
-    <color name="config_color_gray_7">#D7D7D7</color>
-    <color name="config_color_gray_8">#E8E8E8</color>
-    <color name="config_color_gray_9">#F9F9F9</color>
+    <color name="config_color_gray_1">#353C46</color>
+    <color name="config_color_gray_2">#49505A</color>
+    <color name="config_color_gray_3">#5D646E</color>
+    <color name="config_color_gray_4">#717882</color>
+    <color name="config_color_gray_5">#858C96</color>
+    <color name="config_color_gray_6">#99A0AA</color>
+    <color name="config_color_gray_7">#ADB4BE</color>
+    <color name="config_color_gray_8">#C4C8D0</color>
+    <color name="config_color_gray_9">#D8DCE4</color>
 
     <color name="config_color_base_1">#111111</color>
     <color name="config_color_base_2">#222222 </color>
